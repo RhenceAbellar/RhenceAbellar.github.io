@@ -1,0 +1,95 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #84405a;
+}
+
+.resume-container {
+    background-color: #f5e3eb;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.profile {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: solid #84405a;
+}
+
+h2 {
+    margin: 5px 0;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+}
+
+h4 {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.icon-text, .education p {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.icon-text img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contacts, .education {
+    text-align: left; 
+}
+
+.objective-skills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.objective, .skills {
+    width: 48%;
+}
+
+.objective p {
+    text-align: center;
+    margin: 0px 12px;
+}
+
+ul {
+    text-align: left;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.button button {
+    background-color: #ffc0cb;
+    color: #8a388a;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #fa9aaa;
+}
