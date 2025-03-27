@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e1;
+    text-align: center;
+    color: #5a4636;
+}
+
+.navbar {
+    background: hsla(15, 25%, 34%, 0.363);
+    padding: 15px 20px;
+}
+
+header {
+    padding: 60px 20px 10px 20px;
+    background: #CBB49D;
+    color: #6d4c41;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.header-logo {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    width: 280px;
+    position: relative;
+    background: white;
+    color: #5a4636;
+    border: 3px solid #b38b6d;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-card img {
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.menu-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: #b38b6d;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-card:hover p {
+    bottom: 0;
+    opacity: 1;
+    height: 50px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(240, 230, 230, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    text-align: left;
+}
+
+#popup-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.popup-text {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+#popup-price {
+    font-weight: bold;
+    color: #6d4c41;
+    margin-top: 10px;
+}
+
+.close-btn {
+    background: #b38b6d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .menu-card {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .popup-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #popup-image {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+

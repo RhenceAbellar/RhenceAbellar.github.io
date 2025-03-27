@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Problem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Created by Rhence Abellar</a>
+        </div>
+   </nav>
+
+   <header class="text-center">
+    <img src="https://i.pinimg.com/736x/29/45/08/29450865cf1ffa71e0db072bf44962ce.jpg" alt="Logo" class="header-logo">
+    <h1>Café Compass</h1>
+    <p>Your Guide to the Best Sips</p>
+   </header>
+
+   <div class="menu-container">
+    <div class="menu-card" data-menu-item="latte" onclick="openPopup('latte')">
+        <img src="https://img.freepik.com/premium-photo/enjoying-creamy-latte-with-beautiful-latte-art-cozy-cafe-setting-generative-ai_437323-32509.jpg" alt="Latte">
+        <h3>Creamy Latte</h3>
+        <p>Rich, creamy coffee with smooth foam.</p>
+    </div>
+
+    <div class="menu-card" data-menu-item="matcha" onclick="openPopup('matcha')">
+        <img src="https://i0.wp.com/sylviawakana.com/wp-content/uploads/2020/04/Dalgona2-1.jpg?fit=750%2C563&ssl=1" alt="Matcha">
+        <h3>Matcha Latte</h3>
+        <p>Earthy, sweet, and creamy matcha goodness.</p>
+    </div>
+
+    <div class="menu-card" data-menu-item="strawberry" onclick="openPopup('strawberry')">
+        <img src="https://iambaker.net/wp-content/uploads/2021/02/straw-frap-1.jpg" alt="Strawberry Frappe">
+        <h3>Strawberry Frappuccino</h3>
+        <p>Refreshing, fruity, and creamy blended drink.</p>
+    </div>
+
+    <div class="menu-card" data-menu-item="croissant" onclick="openPopup('croissant')">
+        <img src="https://www.lalevain.com/wp-content/uploads/2021/11/Xsant.jpg" alt="Croissant">
+        <h3>Buttery Croissant</h3>
+        <p>Flaky, buttery pastry with a golden crust.</p>
+    </div>
+
+    <div class="menu-card" data-menu-item="pancake" onclick="openPopup('pancake')">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/06/FluffyJapanesePancakes-e6d7773.jpg" alt="Pancakes">
+        <h3>Fluffy Pancakes</h3>
+        <p>Soft, thick pancakes served with syrup.</p>
+    </div>
+
+    <div class="menu-card" data-menu-item="chocolate" onclick="openPopup('chocolate')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotYv1Eij9JE3cLebed_ta3cl9yVi-TJX_ww&s" alt="Chocolate Mousse">
+        <h3>Chocolate Mousse</h3>
+        <p>Decadent and velvety chocolate delight.</p>
+    </div>
+   </div>
+
+
+   <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <img id="popup-image" src="" alt="">
+            <div class="popup-text">
+                <h2 id="popup-title"></h2>
+                <p id="popup-description"></p>
+                <p id="popup-price"></p>
+                <button class="close-btn" onclick="closePopup()">Main Menu</button>
+            </div>
+        </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
+
