@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll(".access-bar a");
+    const sections = document.querySelectorAll("section");
+    const carousel = document.querySelector(".carousel-section");
+
+    function showTab(targetId) {
+        sections.forEach(section => {
+            section.style.display = section.id === targetId || targetId === "all" ? "block" : "none";
+        });
+
+        carousel.style.display = targetId === "all" ? "block" : "none";
+
+        tabs.forEach(tab => {
+            tab.classList.toggle("active", tab.getAttribute("href").substring(1) === targetId);
+        });
+    }
+
+    showTab("all");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function(event) {
+            event.preventDefault();
+            showTab(this.getAttribute("href").substring(1));
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const addToCartBtn = document.querySelector('.btn-warning');
     if (addToCartBtn) {
@@ -9,8 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const buyNowBtn = document.querySelector('.btn-success');
     if (buyNowBtn) {
         buyNowBtn.addEventListener('click', function() {
-            const confirmPurchase = confirm('Are you sure you want to proceed to payment?');
-            if (confirmPurchase) {
+            if (confirm('Are you sure you want to proceed to payment?')) {
                 alert('Proceeding to checkout!');
                 window.location.href = "payment.html";
             } else {
@@ -19,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
 const menuItems = [
     {
         title: "Bug Out Ultra Ticket Box",
@@ -145,18 +170,13 @@ const menuItems = [
 
 function openPopup(menuItemIndex) {
     const menuItem = menuItems[menuItemIndex];
- 
     document.getElementById("popup-title").innerText = menuItem.title;
     document.getElementById("popup-image").src = menuItem.image;
     document.getElementById("popup-description").innerText = menuItem.description;
     document.getElementById("popup-price").innerText = "Price: " + menuItem.price;
-
     document.getElementById("popup").classList.add("active");
 }
 
 function closePopup() {
     document.getElementById("popup").classList.remove("active");
 }
-
-
-
